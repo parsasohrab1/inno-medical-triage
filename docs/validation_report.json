@@ -1,0 +1,140 @@
+{
+  "package": "inno_medical_triage",
+  "trl_claim": 4,
+  "data": "synthetic only",
+  "all_pass": true,
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "within_one_level": 0.9957,
+        "exact_agreement": 0.9247,
+        "undertriage_rate": 0.0139,
+        "arrival_forecast_gain": 0.258,
+        "n_patients": 3000
+      },
+      "criteria": [
+        {
+          "metric": "within_one_level",
+          "op": ">=",
+          "threshold": 0.97,
+          "value": 0.9957,
+          "pass": true,
+          "description": "suggested level within one of reference level"
+        },
+        {
+          "metric": "undertriage_rate",
+          "op": "<=",
+          "threshold": 0.05,
+          "value": 0.0139,
+          "pass": true,
+          "description": "ESI 1-2 patients suggested level 3-5 (undertriage)"
+        },
+        {
+          "metric": "exact_agreement",
+          "op": ">=",
+          "threshold": 0.75,
+          "value": 0.9247,
+          "pass": true,
+          "description": "exact agreement with reference level"
+        },
+        {
+          "metric": "arrival_forecast_gain",
+          "op": ">=",
+          "threshold": 0.1,
+          "value": 0.258,
+          "pass": true,
+          "description": "hourly arrival forecast MAE gain over same-hour-yesterday"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "within_one_level": 0.991,
+        "exact_agreement": 0.9217,
+        "undertriage_rate": 0.0166,
+        "arrival_forecast_gain": 0.2658,
+        "n_patients": 3000
+      },
+      "criteria": [
+        {
+          "metric": "within_one_level",
+          "op": ">=",
+          "threshold": 0.97,
+          "value": 0.991,
+          "pass": true,
+          "description": "suggested level within one of reference level"
+        },
+        {
+          "metric": "undertriage_rate",
+          "op": "<=",
+          "threshold": 0.05,
+          "value": 0.0166,
+          "pass": true,
+          "description": "ESI 1-2 patients suggested level 3-5 (undertriage)"
+        },
+        {
+          "metric": "exact_agreement",
+          "op": ">=",
+          "threshold": 0.75,
+          "value": 0.9217,
+          "pass": true,
+          "description": "exact agreement with reference level"
+        },
+        {
+          "metric": "arrival_forecast_gain",
+          "op": ">=",
+          "threshold": 0.1,
+          "value": 0.2658,
+          "pass": true,
+          "description": "hourly arrival forecast MAE gain over same-hour-yesterday"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "within_one_level": 0.9943,
+        "exact_agreement": 0.9293,
+        "undertriage_rate": 0.009,
+        "arrival_forecast_gain": 0.2515,
+        "n_patients": 3000
+      },
+      "criteria": [
+        {
+          "metric": "within_one_level",
+          "op": ">=",
+          "threshold": 0.97,
+          "value": 0.9943,
+          "pass": true,
+          "description": "suggested level within one of reference level"
+        },
+        {
+          "metric": "undertriage_rate",
+          "op": "<=",
+          "threshold": 0.05,
+          "value": 0.009,
+          "pass": true,
+          "description": "ESI 1-2 patients suggested level 3-5 (undertriage)"
+        },
+        {
+          "metric": "exact_agreement",
+          "op": ">=",
+          "threshold": 0.75,
+          "value": 0.9293,
+          "pass": true,
+          "description": "exact agreement with reference level"
+        },
+        {
+          "metric": "arrival_forecast_gain",
+          "op": ">=",
+          "threshold": 0.1,
+          "value": 0.2515,
+          "pass": true,
+          "description": "hourly arrival forecast MAE gain over same-hour-yesterday"
+        }
+      ]
+    }
+  ]
+}
